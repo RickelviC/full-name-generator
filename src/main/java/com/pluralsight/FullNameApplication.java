@@ -5,8 +5,6 @@ import java.util.Scanner;
 public class FullNameApplication {
     public static void main(String[] args) {
 
-
-
         Scanner scanner = new Scanner(System.in);
         String firstName = "";
         String lastName = "";
@@ -14,7 +12,7 @@ public class FullNameApplication {
         while (firstName.equals("")){
             System.out.println("please enter your first name");
             System.out.print("First name: ");
-            firstName = scanner.nextLine();
+            firstName = scanner.nextLine().trim();
 
             if(firstName.equals("")){
                 System.out.println("must have a first name");
@@ -23,24 +21,19 @@ public class FullNameApplication {
 
         firstName = firstName.substring(0,1).toUpperCase() + firstName.substring(1) + " ";
 
-
-
         System.out.print("Middle name: ");
-        String middleName = scanner.nextLine();
+        String middleName = scanner.nextLine().trim();
 
         if (middleName.equals("")){
             middleName = "";
         }else {
             middleName = middleName.substring(0,1).toUpperCase() + ". ";
-
         }
-
-
 
         while (lastName.equals("")){
             System.out.println("please enter your Last name");
             System.out.print("Last name: ");
-            lastName = scanner.nextLine();
+            lastName = scanner.nextLine().trim();
 
             if(lastName.equals("")){
                 System.out.println("must have a Last name");
@@ -50,7 +43,7 @@ public class FullNameApplication {
         lastName = lastName.substring(0,1).toUpperCase() + lastName.substring(1);
 
         System.out.print("Suffix: ");
-        String suffix = scanner.nextLine();
+        String suffix = scanner.nextLine().trim();
 
         if (suffix.equals("")){
             suffix = "";
