@@ -9,12 +9,12 @@ public class FullNameApplication {
         String firstName = "";
         String lastName = "";
 
-        while (firstName.equals("")){
+        while (firstName.isEmpty()){
             System.out.println("please enter your first name");
             System.out.print("First name: ");
             firstName = scanner.nextLine().trim();
 
-            if(firstName.equals("")){
+            if(firstName.isEmpty()){
                 System.out.println("must have a first name");
             }
         }
@@ -24,18 +24,18 @@ public class FullNameApplication {
         System.out.print("Middle name: ");
         String middleName = scanner.nextLine().trim();
 
-        if (middleName.equals("")){
+        if (middleName.isEmpty()){
             middleName = "";
         }else {
             middleName = middleName.substring(0,1).toUpperCase() + ". ";
         }
 
-        while (lastName.equals("")){
+        while (lastName.isEmpty()){
             System.out.println("please enter your Last name");
             System.out.print("Last name: ");
             lastName = scanner.nextLine().trim();
 
-            if(lastName.equals("")){
+            if(lastName.isEmpty()){
                 System.out.println("must have a Last name");
             }
         }
@@ -45,7 +45,7 @@ public class FullNameApplication {
         System.out.print("Suffix: ");
         String suffix = scanner.nextLine().trim();
 
-        if (suffix.equals("")){
+        if (suffix.isEmpty()){
             suffix = "";
         }else {
             suffix = ", " + suffix;
