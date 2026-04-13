@@ -61,6 +61,5 @@ public class FullNameApplication {
         String fullName = firstName + middleName + lastName + suffix;
 
         System.out.print("Full name: " + fullName);
-
     }
 }
