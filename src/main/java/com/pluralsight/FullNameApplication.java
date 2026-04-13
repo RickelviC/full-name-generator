@@ -28,7 +28,13 @@ public class FullNameApplication {
         System.out.print("Middle name: ");
         String middleName = scanner.nextLine();
 
-        middleName = middleName.substring(0,1).toUpperCase() + ". ";
+        if (middleName.equals("")){
+            middleName = "";
+        }else {
+            middleName = middleName.substring(0,1).toUpperCase() + ". ";
+
+        }
+
 
 
         while (lastName.equals("")){
@@ -41,16 +47,18 @@ public class FullNameApplication {
             }
         }
 
-        lastName = lastName.substring(0,1).toUpperCase() + lastName.substring(1) + " ";
+        lastName = lastName.substring(0,1).toUpperCase() + lastName.substring(1);
 
         System.out.print("Suffix: ");
         String suffix = scanner.nextLine();
 
-
-
+        if (suffix.equals("")){
+            suffix = "";
+        }else {
+            suffix = ", " + suffix;
+        }
 
         String fullName = firstName + middleName + lastName + suffix;
-
 
         System.out.print("Full name: " + fullName);
 
