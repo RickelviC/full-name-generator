@@ -21,10 +21,14 @@ public class FullNameApplication {
             }
         }
 
+        firstName = firstName.substring(0,1).toUpperCase() + firstName.substring(1) + " ";
+
 
 
         System.out.print("Middle name: ");
         String middleName = scanner.nextLine();
+
+        middleName = middleName.substring(0,1).toUpperCase() + ". ";
 
 
         while (lastName.equals("")){
@@ -37,10 +41,15 @@ public class FullNameApplication {
             }
         }
 
+        lastName = lastName.substring(0,1).toUpperCase() + lastName.substring(1) + " ";
+
         System.out.print("Suffix: ");
         String suffix = scanner.nextLine();
 
-        String fullName = firstName + " " + middleName + " " + lastName + " " + suffix;
+
+
+
+        String fullName = firstName + middleName + lastName + suffix;
 
 
         System.out.print("Full name: " + fullName);
